@@ -47,6 +47,10 @@ MySQL  localhost:33060+ ssl  seriesdb  SQL > select * from series;
 |  7 | Money heist         | Crime   | AlexPina        | Europe       | NULL    | 2007-09-24 | NULL       |
 +----+---------------------+---------+-----------------+--------------+---------+------------+------------+
 
+ MySQL  localhost:33060+ ssl  seriesdb  SQL > select series_name,director_name,genre,country_name from series                                                                                                     
+                                          -> where country_name = 'USA' AND status = 'end';                                                                          
+ +---------------------+-----------------+--------+--------------+                                                   | series_name         | director_name   | genre  | country_name |                                                   +---------------------+-----------------+--------+--------------+                                                   | Game of thrones     | Neil Marshall   | drama  | USA          |                                                   | Breaking bad        | Vincent         | crime  | USA          |                                                   | The Big Bang Theory | Mark Cendrowsik | Sitcom | USA          |                                                   +---------------------+-----------------+--------+--------------+                                                                    
+
 
   MySQL  localhost:33060+ ssl  seriesdb  SQL > select * from series  where yor between '2010-10-31' AND '2018-11-16';  
                                                  
